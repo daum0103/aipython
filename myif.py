@@ -41,15 +41,15 @@ n = int(input("선택: "))
 # 만약에 1을 입력하면 1번에 캐릭터 출력
 if n == 1:
     print("고양이 그림")
-     print_cat()
+    print_cat()
 # 만약에 2를 입력하면 2번 캐릭터 출력
 elif n == 2:
     print("강아지")
-     print_dog()
+    print_dog()
     # 3을 입력하면 3번 캐릭터 출력
 elif n == 3:
     print("토 끼")
     print_rabbit()
 # 잘못 입력하면 잘못 입력했다고 출력
-else 
+else: 
     print("잘못 입력")
