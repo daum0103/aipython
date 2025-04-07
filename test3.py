@@ -72,6 +72,32 @@ else:
 # 위 프로그램을 완성한 사람은 프로그램이 계속(무한)반복하게 하고 
 # 만약에 0을 입력하면 종료 되는 프로그램을 만드시오
 
+# 함수로 만들기
+def play():
+    print("그림 출력 프로그램")
+    print("=====================")
+    print("1. 고양이")
+    print("2. 강아지")
+    print("3. 토끼")
+    print("0. 종료")
+    print("=====================")
+    n = int(input("선택: "))
+
+    if n == 1:
+        print("고양이 그림")
+        print_cat()
+    elif n == 2:
+        print("강아지 그림")
+        print_dog()
+    elif n == 3:
+        print("토끼 그림")
+        print_rabbit()
+    elif n == 0:
+        print("프로그램 종료!")
+        break
+    else:
+        print("잘못 입력")
+
 # 프로그램 5번 반복
 for i in range(5):
     print(f"{i+1}번째 실행")
