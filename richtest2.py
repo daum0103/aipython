@@ -61,7 +61,7 @@ layout["header"].update(
 # 사이드바 - 프로필
 profile = Table.grid(padding=1)
 profile.add_column(justify="center")
-profile.add_row("[bold cyan]🌈 다움움's Profile")
+profile.add_row("[bold cyan]🌈 다움's Profile")
 profile.add_row("📸 [italic]사진은 준비 중...[/italic]")
 profile.add_row("📍 부산")
 profile.add_row("💬 상태메시지: [bold yellow]요즘 범고래 사냥하기에 빠짐[/bold yellow]")
@@ -79,7 +79,7 @@ guestbook.add_row("- 누가 방명록 좀 남겨줘요ㅠㅠ")
 layout["main"].update(Panel(guestbook, title="📒 게시판", border_style="green"))
 
 # 푸터
-footer_text = Text("ⓒ 2025. 다움움's Console Minihomepy | 방명록은 언제나 환영 😊", style="dim")
+footer_text = Text("ⓒ 2025. 다움's Console Minihomepy | 방명록은 언제나 환영 😊", style="dim")
 layout["footer"].update(Align.center(footer_text, vertical="middle"))
 
 # 출력
