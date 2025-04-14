@@ -26,52 +26,6 @@ for task in track(range(10), description="처리 중..."):
     time.sleep(0.1)
 
 
-from rich.console import Console
-from rich.panel import Panel
-from rich.markdown import Markdown
-from rich.syntax import Syntax
-from rich.logging import RichHandler
-import logging
-
-console = Console()
-
-# 1. 패널 출력 (박스 안에 텍스트)
-console.print(Panel(" [bold green] 누가잇을까? [/bold green] ", title="💡 빡키마's garden"))
-
-# 2. 마크다운 렌더링
-markdown_text = """
-# 📝 오늘의 먹빵은
-## 범고래 사냥하기
-- 수가 귀엽게생김
-- 범고래수인 공이 섹시함
-**맛있다!** *맛있다!*
-"""
-md = Markdown(markdown_text)
-console.print(md)
-
-# 3. 코드 하이라이팅
-code = '''
-def hello(키마):
-    print(f"Hello, {키마}!")
-hello("키마")
-'''
-syntax = Syntax(code, "python", theme="monokai", line_numbers=True)
-console.print(syntax)
-
-# 4. RichHandler로 로그 출력
-logging.basicConfig(
-    level="NOTSET",  # DEBUG, INFO, WARNING, ERROR 가능
-    format="%(message)s",
-    datefmt="[%X]",
-    handlers=[RichHandler()]
-)
-log = logging.getLogger("rich")
-
-log.debug("디버그 메시지입니다.")
-log.info("정보 메시지입니다.")
-log.warning("경고 메시지입니다.")
-log.error("에러 메시지입니다.")
-
 
 from rich.console import Console
 from rich.panel import Panel
@@ -99,7 +53,7 @@ layout["body"].split_row(
 # 헤더
 layout["header"].update(
     Panel(
-        Align.center("[bold magenta]★ 빡키마의 미니홈피에 오신 걸 환영합니다 ★", vertical="middle"),
+        Align.center("[bold magenta]★ 다움의 미니홈피에 오신 걸 환영합니다 ★", vertical="middle"),
         style="bold white on dark_green"
     )
 )
@@ -107,7 +61,7 @@ layout["header"].update(
 # 사이드바 - 프로필
 profile = Table.grid(padding=1)
 profile.add_column(justify="center")
-profile.add_row("[bold cyan]🌈 키마's Profile")
+profile.add_row("[bold cyan]🌈 다움움's Profile")
 profile.add_row("📸 [italic]사진은 준비 중...[/italic]")
 profile.add_row("📍 부산")
 profile.add_row("💬 상태메시지: [bold yellow]요즘 범고래 사냥하기에 빠짐[/bold yellow]")
@@ -125,7 +79,7 @@ guestbook.add_row("- 누가 방명록 좀 남겨줘요ㅠㅠ")
 layout["main"].update(Panel(guestbook, title="📒 게시판", border_style="green"))
 
 # 푸터
-footer_text = Text("ⓒ 2025. 키마's Console Minihomepy | 방명록은 언제나 환영 😊", style="dim")
+footer_text = Text("ⓒ 2025. 다움움's Console Minihomepy | 방명록은 언제나 환영 😊", style="dim")
 layout["footer"].update(Align.center(footer_text, vertical="middle"))
 
 # 출력
